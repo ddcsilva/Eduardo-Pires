@@ -9,8 +9,8 @@ namespace TesteRouteMVC5.Controllers
     [RoutePrefix("testes")]
     public class TesteController : Controller
     {
-        [Route]
-        public ActionResult Index()
+        [Route("{teste:int}/{texto:maxlength(50)}")]
+        public ActionResult Index(int teste, string texto)
         {
             return View();
         }
